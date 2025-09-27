@@ -1,0 +1,26 @@
+header h1{
+    color : brown;
+    text-align: center;
+}
+header p{
+    text-indent: 1em;
+}
+body{
+    background: aliceblue;
+}
+form{
+    background: pink;
+}
+form span {
+    color : blue;
+    font-weight : 700;
+}
+p{
+    font-family : 'GabiaSolmee-Regular';
+}
+footer{
+    border-radius : 10px;
+    background: orange;
+    text-indent: 1em;
+}
+
