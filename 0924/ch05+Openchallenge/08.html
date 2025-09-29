@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>리스트로 수직 메뉴 만들기</title>
+    <style>
+        #menubar {
+            background: olive;
+            width: 100px;
+            
+        }
+        #menubar ul { /*여백과 패딩 모두 0*/
+            margin: 0;
+            padding: 0;
+            height: 100px; /*모든 li를 한 줄에 담을 폭*/
+        }
+        #menubar ul li {    
+            display: block;  /*하나 끝나면 다음 줄로 넘어감 */
+            list-style-type: none;  /*마커 삭제*/
+            padding: 0px 15px;}     /*top = bottom = 0, left = right = 15px*/
+        #menubar ul li a {
+            color: white;
+            text-decoration: none;  /*링크 안보이게*/
+        }
+        #menubar ul li a:hover {
+            color: violet;  /*마우스 올라갈 때 색*/
+        }
+    </style>
+</head>
+<body>
+<nav id="menubar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Espresso</a></li>
+        <li><a href="#">Cappuccino</a></li>
+        <li><a href="#">Cafe latte</a></li>
+        <li><a href="#">F.A.Q</a></li>
+    </ul>
+</nav>
+</body>
+</html>

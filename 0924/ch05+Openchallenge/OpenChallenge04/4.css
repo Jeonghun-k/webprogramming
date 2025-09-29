@@ -1,0 +1,36 @@
+
+        html,body{
+            margin : 0;
+            padding : 0;
+            height : 100%;
+        }
+        header h1 {
+        
+            text-align: center;
+        }
+        header{
+            height : 25%;
+            width: 100%;
+            background : yellow;
+            float: left;
+        }
+        nav{
+            display : inline-block;
+            background : orange;
+            width: 20%;
+            height: 100%;
+            
+        }
+        section{
+            background: lightblue;
+            width: 80%;
+            height: 100%;
+            float : right;
+        }
+        footer{
+            background : violet;
+            width: 100%;
+            height: 8%;
+            float : left;
+        }
+        
