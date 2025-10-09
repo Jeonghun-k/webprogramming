@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>script 태그에 자바스크립트 작성</title>
+    <script>
+        function over(obj) {
+            obj.src = "./Images/banana.jpeg";
+        }
+        function out(obj) {
+            obj.src = "./Images/apple.jpg";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>마우스 올려보세요</h3>
+    <hr>
+    <img src="./Images/apple.jpg" alt="이미지" onmouseover="over(this)" onmouseout="out(this)">
+</body>
+
+</html>
