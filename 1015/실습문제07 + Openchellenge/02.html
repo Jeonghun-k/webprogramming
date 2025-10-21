@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 5개 입력받아 역순으로 출력</title>
+</head>
+<body>
+    <h3>함수 5개 입력받아 역순으로 출력</h3>
+    <hr>
+    <script>
+        let num =[];
+        for(let i = 0; i < 5; i++){
+            let w = prompt("정수입력")
+            num[i] = parseInt(w);
+        }
+        document.write("입력된 수의 배열");
+        document.write("<br>");
+        document.write(num + " ");
+        /*
+        while (num.length >0){
+            document.write(num);
+        }
+        */
+        document.write("<hr>");
+        document.writeln("역순으로 재정렬된 배열");
+        num.reverse();
+        document.write("<br>");
+        document.write(num + " ");
+        /*
+        while(num.length > 0){
+            document.write(num.pop());
+        }
+            */
+
+    </script>
+    
+</body>
+</html>
