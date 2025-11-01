@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스펀지밥</title>
+</head>
+<body>
+    <h3>클릭하면 90도 회전합니다.</h3>
+    <hr>
+    <img src="sp.png" alt="스펀지밥" onclick="rotate(this)">
+    <script>
+        let n = 90; // function안에 들어가있으면 n이 계속해서 90으로 초기화 되기 때문에 function밖에 있어야 지속해서 돌아간다,
+        function rotate(obj){
+            
+            obj.style.transform = "rotate(" + n + "deg)";
+            n += 90;
+            n %= 360;
+        }
+    </script>
+</body>
+</html>

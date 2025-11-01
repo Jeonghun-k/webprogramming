@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>라면을 끓이는 순서</h3>
+    <hr>
+    <ol id = "noodle" type = "A" style = "background-color : yellowgreen" onclick="prom(this)">
+        <li>물을 끓인다</li>
+    </ol>
+    <script>
+        function prom(){
+            let p = prompt("라면을 끓이는 순서를 입력하라");
+
+            // li 요소 생성 밑 생성돈 요소에 입력받은 문자열 대입
+             let newLi = document.createElement("li");
+             newLi.innerText = p;
+            
+             // obj에 noodle 아이디를 추가 후 거기에 자식을 추가하는 방식으로 입력받은 문자열 삽입
+             let obj = document.getElementById("noodle");
+             obj.appendChild(newLi);
+
+        }
+    </script>
+</body>
+</html>
