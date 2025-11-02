@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아이템에 마우스를 올리면 설명 출력</title>
+  <style>
+    #commentDiv {
+      position: absolute;
+      visibility: hidden;
+      border: 1px solid yellowgreen;
+      background: aliceblue;
+      width: 200px;
+      min-height: 60px;
+      padding: 6px 8px;
+      box-sizing: border-box;
+      pointer-events: none; /* 툴팁에 마우스 걸리지 않게 */
+    }
+  </style>
+  <script>
+    function init() {
+      const texts = [
+        "빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다.",
+        "여름 동안 다양한 장르 100권 읽기. 하루 2~3권 속독 도전!",
+        "수영·사이클·런 루틴으로 철인 3종 준비 시작!",
+        "자바스크립트 완전 정복! 이벤트/DOM/비동기까지."
+      ];
+
+      const commentDiv = document.getElementById("commentDiv");
+      const liArray = document.getElementsByTagName("li");
+
+      // 공용 함수: 툴팁 표시/숨김
+      function setCommentDiv(comment, ev) {
+        commentDiv.innerHTML = comment;
+        commentDiv.style.left = ev.clientX + 12 + "px";
+        commentDiv.style.top  = ev.clientY + 12 + "px";
+        commentDiv.style.visibility = "visible";
+      }
+      function hideCommentDiv() {
+        commentDiv.style.visibility = "hidden";
+      }
+
+      function over(e) {
+        let n = 0;
+        switch (e.target.id) {           // ✅ target 오타 수정
+          case "l0": n = 0; break;
+          case "l1": n = 1; break;
+          case "l2": n = 2; break;
+          case "l3": n = 3; break;
+        }
+        setCommentDiv(texts[n], e);      // ✅ 이벤트 객체 전달
+      }
+
+      // 각 li에 이벤트 연결
+      for (let i = 0; i < liArray.length; i++) {
+        liArray[i].addEventListener("mouseover", over, false);
+        liArray[i].addEventListener("mousemove", (e)=> {
+          // 움직일 때 툴팁 따라오게 (선택사항)
+          if (commentDiv.style.visibility === "visible") setCommentDiv(commentDiv.innerHTML, e);
+        }, false);
+        liArray[i].addEventListener("mouseout", hideCommentDiv, false); // ✅ 대소문자/스코프 해결
+      }
+    }
+  </script>
+</head>
+<body onload="init()">
+  <h3>아이템에 마우스를 올리면 설명 출력</h3>
+  <hr>
+  <p>여름 방학 때 하고 싶은 것들</p>
+  <ul>
+    <li id="l0">자전거로 대한민국 일주</li>
+    <li id="l1">책 100권 읽기</li>
+    <li id="l2">철인 3종 경기 준비</li>
+    <li id="l3">자바스크립트 정복</li>
+  </ul>
+  <div id="commentDiv"></div>
+</body>
+</html>

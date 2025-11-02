@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate(e){
+            if(e.key == "Enter"){
+                let sik = document.getElementById("sik");
+                let result = document.getElementById("result");
+                result.value = eval(sik.value);
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    <p>수식을 입력하고 &lt;Enter&gt;를 입력하세요.</p>
+    <form>
+        식 : <input type="text" name = "sik" id = "sik" onkeydown="calculate(event)"><br>
+        답 : <input type="text" name = "result" id = "result">
+    </form>
+    
+</body>
+</html>
