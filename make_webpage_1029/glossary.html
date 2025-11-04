@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='ko'><head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>향수 용어</title>
+    <link rel='stylesheet' href='styles.css'>
+    <style>
+        /* (내가) 네비게이터에 내가 어디페이지에있는지 강조 */
+        .nav a[href="glossary.html"]{
+                color: #000;
+                font-weight: bold;
+                background-color: #f3f3f3;
+                border-radius: 4px;
+        }
+        /* (내가) p태그가 창과 너무 붙어있어서 공백 추가 */
+        p{
+            text-indent: 10px;
+        }
+        /* (내가) header부분 색상을 body부분이랑 구분하기위해 변경 */
+        .site-header{
+            background : ivory;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- (내가) 각 페이지에도 배너 추가하고 그 페이지에 맞는곳에 호버 유지하게하기 -->
+    <header class = "site-header">
+        <div class="container header-inner">
+            <a href="index.html" class = "logo" aria-label="Chez Scent 홈">Chez scent</a>
+            <nav class="nav" aria-label="주요 메뉴">
+                <a href="index.html" target="_blank" rel="noopener">홈</a>
+                <a href="glossary.html" class="active">향수 용어</a>
+                <a href="notes.html" target="_blank" rel="noopener">향수 노트</a>
+                <a href="brands.html" target="_blank" rel="noopener">브랜드별 향수</a>
+            </nav>
+            <div class="icons">
+                <button class="icon-btn" aria-label="검색 열기" id="openSearch">🔎</button>
+                <button class="icon-btn" aria-label="로그인" id="openLogin">👤</button>
+                <button class="icon-btn" aria-label="유튜브" id="openYoutube">
+                    <a href="https://youtube.com/@hyang_suda?si=i_9g1T9GB4ag6FPf" target = "_blank">
+                        📽️
+                    </a>
+                </button>
+    </header>
+    <div class='page container'>
+        <h1>향수 용어</h1>
+        <ul class='list'>
+            <li><strong>시야주</strong>: 움직일 때 퍼지는 향의 자취</li>
+            <li><strong>롱제비티</strong>: 지속 시간</li>
+            <li><strong>농도</strong>: EDT &lt; EDP &lt; Extrait</li>
+            <li><strong>드라이다운</strong>: 잔향 단계</li>
+        </ul>
+    </div>
+    <!-- (내가)유튜브 링크 삽입 -->
+    <div>
+        <p>
+            <a href="https://youtube.com/shorts/Rtv-GOIjmzg?si=vrb290fgsz9RO5cq">
+                <strong>edt,edp</strong>관련 유튜브 영상
+            </a>
+        </p>
+    </div>
+</body>
+</html>

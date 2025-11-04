@@ -1,0 +1,222 @@
+/* Parfumerie simple minimal theme */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pretendard", Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid #ddd;
+  background: ivory;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  gap: 20px;
+  flex: 1;
+}
+
+.nav a {
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #666;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+/* (내가) 호버기능 추가 */
+.nav a:hover {
+  background: #f3f3f3;
+  color: #000;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.icon-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+/* Banners */
+.banners {
+  padding: 20px 0 40px;
+}
+
+.banners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.banner {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  background: #fff;
+}
+
+.banner h3 {
+  margin: 0.5em 0;
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 12px;
+}
+
+.card img {
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid #ddd;
+  padding: 16px 0;
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Dialogs */
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.modal {
+  background: #fff;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  margin: auto;
+  padding: 16px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-form input,
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+}
+
+/* 짤꺼
+1. 유튜브링크 달기 v
+2. 유튜브 버튼 달기 v
+3. 계절에 따라 색상 바뀌게 하기 
+4. 다른페이지 베너 제작 및 호버 색상 유지 v
+5. 이미지 생성 및 사이즈 변경 v
+*/
+
+/* 내가 한 코드 
+유튜브 링크 달기
+유튜브 버튼 달기
+iframe 사용해서 유튜브 영상 달기
+호버기능 추가
+다른페이지 베너 제작 및 호버 색상 유지
+이미지 사이즈 변경
+이미지에 호버기능 추가
+p태그 공백 추가
+header부분 body와 구분하기 위해 색상 변경
+*/
+
+

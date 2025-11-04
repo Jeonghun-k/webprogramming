@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chez Scent</title>
+  <meta name="description" content="Parfumerie: 향수 용어, 노트, 브랜드 대표작, 신제품, 커뮤니티" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Parfumerie 홈">Chez Scent</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="index.html" class="active">홈</a>
+        <a href="glossary.html" target="_blank" rel="noopener">향수 용어</a>
+        <a href="notes.html" target="_blank" rel="noopener">향수 노트</a>
+        <a href="brands.html" target="_blank" rel="noopener">브랜드별 향수</a>
+      </nav>
+      <div class="icons">
+        <button class="icon-btn" aria-label="검색 열기" id="openSearch">🔎</button>
+        <button class="icon-btn" aria-label="로그인" id="openLogin">👤</button>
+        <!-- (내가)유튜브 버튼 추가 -->
+        <button class="icon-btn" aria-label="유튜브" id="openYoutube">
+          <a href="https://youtube.com/@hyang_suda?si=i_9g1T9GB4ag6FPf" target = "_blank">
+            📽️
+          </a>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>당신만의 완벽한<br>향기를 찾아보세요</h1>
+          <p>전문적인 향수 정보와 커뮤니티에서 당신의 시그니처 향수를 발견하세요</p>
+          <div class="cta">
+            <a class="btn solid" href="brands.html" target="_blank" rel="noopener">향수 둘러보기</a>
+          </div>
+        </div>
+        <br>
+        <div class="hero-art">
+          <img src="assets/image.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="banners">
+      <div class="container banners-grid">
+        <a class="banner" href="glossary.html" target="_blank" rel="noopener">
+          <div class="badge">용어</div>
+          <h3>향수 용어 가이드</h3>
+          <p>시야주 · 롱제비티 · 농도</p>
+        </a>
+        <a class="banner" href="notes.html" target="_blank" rel="noopener">
+          <div class="badge">노트</div>
+          <h3>Top · Heart · Base</h3>
+          <p>노트 구조와 대표 재료</p>
+        </a>
+        <a class="banner" href="brands.html" target="_blank" rel="noopener">
+          <div class="badge">브랜드</div>
+          <h3>브랜드별 대표 향수</h3>
+          <p>한눈에 비교</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <small>© <span id="year"></span> Parfumerie</small>
+      <a href="#" class="to-top">↑</a>
+    </div>
+  </footer>
+
+  <dialog id="searchDlg">
+    <article class="modal">
+      <header class="modal-head"><h3>검색</h3><button class="close" data-close>×</button></header>
+      <form class="search-form" onsubmit="return false;">
+        <input type="search" placeholder="브랜드나 제품명 검색…" autofocus />
+        <button class="btn solid">검색</button>
+      </form>
+    </article>
+  </dialog>
+
+  <!-- (내가) 로그인 버튼 생성 / css는 내가 만들어둔 코드에서 추가해달라고함-->
+  <dialog id="loginDlg">
+    <article class="modal">
+      <header class="modal-head"><h3>로그인</h3><button class="close" data-close>×</button></header>
+      <form class="login-form">
+        <label>아이디 <input type="text" required></label>
+        <label>비밀번호 <input type="password" required></label>
+        <br>
+        <button class="btn solid">로그인</button>
+      </form>
+    </article>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
