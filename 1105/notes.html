@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html lang='ko'>
+    <head><meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <title>향수 노트</title>
+        <link rel='stylesheet' href='styles.css'>
+        <style>
+            /* (내가) 네비게이터에 내가 어디페이지에있는지 강조 */
+            .nav a[href = "notes.html"]{
+                color: #000;
+                font-weight: bold;
+                background-color: #f3f3f3;
+                border-radius: 4px;
+            }
+            .site-header{
+                background : ivory;
+            }
+
+            .text-box{
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- (내가) 각 페이지에도 배너 추가하고 그 페이지에 맞는곳에 호버 유지하게하기 -->
+        <header class = "site-header">
+            <div class="container header-inner">
+                <a href="index.html" class = "logo" aria-label="Chez Scent 홈">Chez scent</a>
+                <nav class="nav" aria-label="주요 메뉴">
+                    <a href="index.html" target="_blank" rel="noopener">홈</a>
+                    <a href="glossary.html" class="active">향수 용어</a>
+                    <a href="notes.html" target="_blank" rel="noopener">향수 노트</a>
+                    <a href="brands.html" target="_blank" rel="noopener">브랜드별 향수</a>
+                </nav>
+                <div class="icons">
+                    <button class="icon-btn" aria-label="검색 열기" id="openSearch">🔎</button>
+                    <button class="icon-btn" aria-label="로그인" id="openLogin">👤</button>
+                    <button class="icon-btn" aria-label="유튜브" id="openYoutube">
+                        <a href="https://youtube.com/@hyang_suda?si=i_9g1T9GB4ag6FPf" target = "_blank">
+                            📽️
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class='page container'>
+            <h1>향수 노트</h1>
+            <!-- (내가) iframe을 이용해서 비디오 자체 출력 -->
+            <iframe src="https://www.youtube.com/embed/TVQAiWTf6dM" frameborder="0"
+            width="300" height="500"></iframe>
+            <div class="text-box">
+                <dl class='terms'>
+                    <dt><h3>노트란?</h3></dt>
+                        <dd>향수의 향을 구성하는 재료들로, 시간에 따라 변화하는 향의 단계를 의미합니다.</dd>
+                    <dt>Top</dt>
+                        <dd>레몬, 베르가못</dd>
+                    <dt>Heart</dt>
+                        <dd>라벤더, 자스민</dd>
+                    <dt>Base</dt>
+                        <dd>머스크, 시더</dd>
+            </dl>
+            </div>
+            
+        </div>
+    </body>
+    </html>
